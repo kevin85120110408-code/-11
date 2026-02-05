@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>五子棋</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div>
+          <div class="title">五子棋</div>
+          <div class="subtitle">在线对战房间</div>
+        </div>
+        <div class="status" id="status">创建或加入房间</div>
+      </div>
+      <div class="board-wrap">
+        <canvas id="board" width="600" height="600"></canvas>
+        <div class="board-glow"></div>
+      </div>
+      <div class="controls room-panel">
+        <button id="createRoom" class="primary">创建房间</button>
+        <div class="room-join">
+          <input id="roomCodeInput" placeholder="输入房间码" />
+          <button id="joinRoom" class="ghost">加入房间</button>
+        </div>
+        <div class="room-info">
+          <div class="room-code" id="roomCodeDisplay">房间码：-</div>
+          <button id="copyCode" class="ghost">复制房间码</button>
+        </div>
+      </div>
+      <div class="tips">
+        黑棋先落子，先连成五子获胜。两人进入房间后自动开始。
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
