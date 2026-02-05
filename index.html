@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>五子棋</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div>
+          <div class="title">五子棋</div>
+          <div class="subtitle">本地强力 AI 对战</div>
+        </div>
+        <div class="status" id="status">你的回合</div>
+      </div>
+      <div class="board-wrap">
+        <canvas id="board" width="600" height="600"></canvas>
+        <div class="board-glow"></div>
+      </div>
+      <div class="controls">
+        <button id="restart" class="primary">重新开始</button>
+        <button id="undo" class="ghost">悔棋</button>
+        <label class="toggle">
+          <input type="checkbox" id="aiFirst" />
+          AI 先手
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="hardMode" checked />
+          强力AI
+        </label>
+      </div>
+      <div class="tips">
+        黑棋先落子，先连成五子获胜。点击棋盘落子，支持悔棋。
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
