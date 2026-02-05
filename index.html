@@ -11,28 +11,27 @@
       <div class="header">
         <div>
           <div class="title">五子棋</div>
-          <div class="subtitle">本地强力 AI 对战</div>
+          <div class="subtitle">在线对战房间</div>
         </div>
-        <div class="status" id="status">你的回合</div>
+        <div class="status" id="status">创建或加入房间</div>
       </div>
       <div class="board-wrap">
         <canvas id="board" width="600" height="600"></canvas>
         <div class="board-glow"></div>
       </div>
-      <div class="controls">
-        <button id="restart" class="primary">重新开始</button>
-        <button id="undo" class="ghost">悔棋</button>
-        <label class="toggle">
-          <input type="checkbox" id="aiFirst" />
-          AI 先手
-        </label>
-        <label class="toggle">
-          <input type="checkbox" id="hardMode" checked />
-          强力AI
-        </label>
+      <div class="controls room-panel">
+        <button id="createRoom" class="primary">创建房间</button>
+        <div class="room-join">
+          <input id="roomCodeInput" placeholder="输入房间码" />
+          <button id="joinRoom" class="ghost">加入房间</button>
+        </div>
+        <div class="room-info">
+          <div class="room-code" id="roomCodeDisplay">房间码：-</div>
+          <button id="copyCode" class="ghost">复制房间码</button>
+        </div>
       </div>
       <div class="tips">
-        黑棋先落子，先连成五子获胜。点击棋盘落子，支持悔棋。
+        黑棋先落子，先连成五子获胜。两人进入房间后自动开始。
       </div>
     </div>
     <script src="main.js"></script>
